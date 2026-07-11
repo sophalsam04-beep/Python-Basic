@@ -44,3 +44,22 @@ with open("example.txt", "w") as file:
     file.write("Python File handling...!");
     
 os.remove("example.txt");
+
+
+
+      # counting word in a file
+with open("newfile.txt", "r") as file:
+  text = file.read();
+  
+words = text.split()
+
+print("Number of words ; ", len(words));
+
+
+      # try catch
+try:
+  with open("newfile.txt", "r") as file:
+    print(file.read());
+  
+except FileNotFoundError:
+  print("file not found...!");
